@@ -24,7 +24,7 @@ if(s == "")return "";
                 while(!st.isEmpty())
                 {
                     if(s.charAt(k) == ']')
-                    {
+               {
                         st.pop();
                         k++;
                     }
