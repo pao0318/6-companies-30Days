@@ -1,5 +1,3 @@
-// https://practice.geeksforgeeks.org/problems/burning-tree/1/
-
 class Solution
 {
     /*class Node {
@@ -14,11 +12,11 @@ class Solution
     	}
     }*/
     
-    static int ans=0;
-    static HashMap<Node, Node> map=new HashMap<>();
     
+    int ans=0;
+    HashMap<Node, Node> map=new HashMap<>();
     
-    public static void getParent(Node root,HashMap<Node, Node> map){
+    public void getParent(Node root,HashMap<Node, Node> map){
             if(root==null)
                 return;
             
@@ -36,15 +34,17 @@ class Solution
         
         
     }
+    // Code has started from here
     
-    public static int minTime(Node root, int target) 
+    public  int minTime(Node root, int target) 
     {
+        
         getParent(root,map);
         dfs(root, target);
         return ans;
     }
     
-    public static void dfs(Node root, int target){
+    public  void dfs(Node root, int target){
         Queue<Pair> pq=new LinkedList<>();
         if(root==null)
             return;
@@ -78,7 +78,7 @@ class Solution
         }
         
     }
-     static class Pair{
+      class Pair{
         Node node;
         boolean vis;
         Pair(Node node){
@@ -86,7 +86,6 @@ class Solution
             vis=false;
         }
     }
-    
-    
+ 
    
 }
