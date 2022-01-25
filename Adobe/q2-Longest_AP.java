@@ -4,7 +4,7 @@ class Solution {
         
         if(n==1)
             return 1;
-        int[][]dp=new int[10001][10001];
+        int[][]dp=new int[n][10001];
         int res=0;
         
         
